@@ -3,6 +3,12 @@
  */
 var loginCtrl=angular.module("demo.login");
 
-loginCtrl.controller("loginController",[function(){
+loginCtrl.controller("loginController",['$scope',function($scope){
+    $scope.userName='';
+    $scope.password='';
+
+    $scope.authenticate = function(){
+    alert($scope.userName);
+    }
 
 }]);

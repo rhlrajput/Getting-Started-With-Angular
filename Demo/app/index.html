@@ -7,16 +7,31 @@
 <body ng-app="Demo">
 
 <script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/underscore/underscore.js"></script>
 
 <script src="../node_modules/angular/angular.js"></script>
 <script src="../node_modules/angular-route/angular-route.js"></script>
+<script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../node_modules/restangular/dist/restangular.js"></script>
 
 <script src="../app/app.module.js"></script>
 <script src="../app/login/login.module.js"></script>
 <script src="../app/login/controllers/login-controller.js"></script>
 <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
-<link rel="stylesheet" href="../app/login/login.css"/>
-<div ng-view></div>
+<link rel="stylesheet" href="../app/style.css"/>
 
+<link rel="stylesheet" href="../app/login/login.css"/>
+<article>
+    <header>
+        <h1 class="text-center login-title">Angular App</h1>
+    </header>
+</article>
+
+<div ng-view></div>
+<footer>
+    <p>Created by: Rahul Rajput</p>
+    <p>Contact information: <a href="mailto:rhlrajput@gmail.com">
+        rhl@gmail.com</a>.</p>
+</footer>
 </body>
 </html>

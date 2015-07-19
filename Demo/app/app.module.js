@@ -3,12 +3,15 @@
  */
 ( function () {
 'use strict';
-    angular.module('Demo', ['ngRoute'
-        , 'demo.login'
+   var app= angular.module('Demo', ['ngRoute'
+        , 'demo.login', 'ui.router','restangular'
     ]);
-    angular.module('Demo').config(demoConfig);
+    app.constant('_',window._);
+    app.constant('ENV','http://63342/Demo/api/v1');
 
-    function demoConfig($routeProvider){
+    app.config(demoConfig);
+
+    function demoConfig($routeProvider,RestangularProvider,ENV){
         $routeProvider.
             when('/', {
                 controller: 'loginController',
@@ -16,5 +19,12 @@
             otherwise({
                 redirectTo:'/'
             });
+        RestangularProvider.setBaseUrl(ENV);
+        // Auth details
+        RestangularProvider.setDefaultHeaders({
+            'Content-Type': 'application/json'
+        });
+        RestangularProvider.setRequestSuffix('.json');
     }
+
 }());

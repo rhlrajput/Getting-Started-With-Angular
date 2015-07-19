@@ -11,6 +11,7 @@
 .form-signin .checkbox
 {
     font-weight: normal;
+    color: #CCC;
 }
 .form-signin .form-control
 {
@@ -26,30 +27,32 @@
 {
     z-index: 2;
 }
-.form-signin input[type="text"]
+.form-signin input[type="email"]
 {
-    margin-bottom: -1px;
+    margin-bottom: 3px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    background-color: #c5c5c5;
 }
 .form-signin input[type="password"]
 {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    background-color: #c5c5c5;
 }
 .account-wall
 {
-    margin-top: 20px;
+    margin-top: 150px;
     padding: 40px 0px 20px 0px;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .login-title
 {
-    color: #555;
+    color: #ccc;
     font-size: 18px;
     font-weight: 400;
     display: block;
@@ -71,5 +74,11 @@
 .new-account
 {
     display: block;
-    margin-top: 10px;
+    width:150px;
+    margin: auto;
+    padding: 10px;
+}
+.btn-block{
+    background-color: #d84a49;
+    color: #ccc;
 }
