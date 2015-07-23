@@ -1,4 +1,10 @@
-{
-  "username": "rhlrajput@gmail.com",
-  "version": "password"
-}
+[
+  {
+    "username": "rhlrajput@gmail.com",
+    "password": "password"
+  },
+  {
+    "username": "test@gmail.com",
+    "password": "password1"
+  }
+]

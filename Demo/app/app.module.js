@@ -7,7 +7,7 @@
         , 'demo.login', 'ui.router','restangular'
     ]);
     app.constant('_',window._);
-    app.constant('ENV','http://63342/Demo/api/v1');
+    app.constant('ENV','http://localhost:63342/Demo/api/');
 
     app.config(demoConfig);
 
