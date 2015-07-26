@@ -14,6 +14,7 @@
 <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="../node_modules/restangular/dist/restangular.js"></script>
 
+
 <script src="../app/app.module.js"></script>
 <script src="../app/login/login.module.js"></script>
 <script src="../app/login/controllers/login-controller.js"></script>
@@ -27,8 +28,12 @@
         <h1 class="text-center login-title">Angular App</h1>
     </header>
 </article>
+<div ng-view>
 
-<div ng-view></div>
+</div>
+<div class="overlay"></div>
+<div class="spinner" ng-show="loading">
+</div>
 <footer>
     <p>Created by: Rahul Rajput</p>
     <p>Contact information: <a href="mailto:rhlrajput@gmail.com">

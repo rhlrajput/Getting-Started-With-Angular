@@ -26,5 +26,17 @@
         });
         RestangularProvider.setRequestSuffix('.json');
     }
+    app.run(function($rootScope, Restangular) {
+        Restangular.addRequestInterceptor(function(element) {
+            $rootScope.loading = true;
+
+            return element;
+        });
+        Restangular.addResponseInterceptor(function(data) {
+            $rootScope.loading = false;
+
+            return data;
+        });
+    });
 
 }());

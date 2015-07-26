@@ -4,21 +4,22 @@
 
 angular.module("demo.login").factory('Authentication', authentication);
 
-function authentication(Restangular) {
+function authentication(Restangular,$timeout) {
+
+        var getConfigurations = function () {
+            //$q y to use ??? deferred promise
+            //var deferred = $q.defer();
+           return Restangular.one("UserInfo").get().then(function(data){
+                //deferred.resolve(data[0].username);
+               $timeout(function(){
+                   return (data[0].username);
+               }, 10000);
+
+            });
+           // return deferred.promise;
+    };
+
     return {
-        /*resolvePromise: function(){
-            Restangular.one('UserInfo').get();
-        },*/
-        login: function(user, password) {
-           // return Restangular.one("UserInfo").post({username: user, password: password});
-            //return Restangular.one("api").customGET("UserInfo", {"filter[where][username]": user});
-            return Restangular.one("UserInfo").customGET("", {username: "rhlrajput@gmail.com"});
-                //get({username: 'rhlrajput@gmail.com'});
-                //customGET({where: '{username: rhlrajput@gmail.com}'});
-            /*return Restangular.all('UserInfo').getList({filters: {
-                username: user,
-                password: password
-            }});*/
-        }
-    }
+        login: getConfigurations
+    };
 }
