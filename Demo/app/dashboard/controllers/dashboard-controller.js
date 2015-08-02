@@ -3,6 +3,6 @@
  */
 
 
-angular.module('dashboard').controller('HomeController',['$scope', function($scope){
+angular.module('dashboard').controller('dashboardController',['$scope', function($scope){
 
 }]);

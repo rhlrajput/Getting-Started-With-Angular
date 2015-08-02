@@ -11,9 +11,7 @@ function authentication(Restangular,$timeout) {
             //var deferred = $q.defer();
            return Restangular.one("UserInfo").get().then(function(data){
                 //deferred.resolve(data[0].username);
-               $timeout(function(){
-                   return (data[0].username);
-               }, 10000);
+                   return data;
 
             });
            // return deferred.promise;

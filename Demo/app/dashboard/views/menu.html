@@ -1,20 +1,14 @@
-<nav id="main-nav">
-    <ul id="nav-primary">
-        <li><a href="#">Mobile</a>
-            <ul class="subnav">
-                <li><a href="#">Blue tooth</a>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">Git Hub</a>
-            <ul class="subnav">
-                <li><a href="#">Get user list</a>
-                </li>
-                <li><a href="#">Search Repository</a>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">Contact us</a>
-        </li>
-    </ul>
-</nav>
+
+<ul class="nav nav-tabs">
+    <li class="active home-menu"><a ui-sref="dashboard">Home</a></li>
+    <li class="active dropdown git-menu">
+        <a class="dropdown-toggle" data-toggle="dropdown" >Git Info <span class="caret"></span></a>
+        <ul class="dropdown-menu submenu">
+            <li><a href="#">Get Users</a></li>
+            <li ><a class="submenu" href="#">Get Project By User</a></li>
+            <li class="submenu"><a href="#">Contact us</a></li>
+        </ul>
+    </li>
+    <li class="active"><a href="#">Bluetooth</a></li>
+    <li class="active"><a href="#/login">Log out</a></li>
+</ul>

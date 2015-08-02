@@ -6,11 +6,18 @@
 </head>
 <body ng-app="Demo">
 
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+<link rel="stylesheet" href="../app/style.css"/>
+
+<link rel="stylesheet" href="../app/login/login.css"/>
+<link rel="stylesheet" href="../app/dashboard/menu.css"/>
 <script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
 <script src="../node_modules/underscore/underscore.js"></script>
 
 <script src="../node_modules/angular/angular.js"></script>
-<script src="../node_modules/angular-route/angular-route.js"></script>
+<!--<script src="../node_modules/angular-route/angular-route.js"></script>-->
 <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="../node_modules/restangular/dist/restangular.js"></script>
 
@@ -23,17 +30,16 @@
 <script src="../app/dashboard/dashboard.module.js"></script>
 <script src="../app/dashboard/controllers/dashboard-controller.js"></script>
 
-<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
-<link rel="stylesheet" href="../app/style.css"/>
+<!--<ng-include src="'views/header.html'"></ng-include>-->
+<!--<div ng-view>
 
-<link rel="stylesheet" href="../app/login/login.css"/>
-<ng-include src="'views/header.html'"></ng-include>
-<div ng-view>
+</div>-->
+<div ui-view>
 
 </div>
 <div class="overlay"></div>
 <div class="spinner" ng-show="loading">
 </div>
-<ng-include src="'views/footer.html'"></ng-include>
+<!--<ng-include src="'views/footer.html'"></ng-include>-->
 </body>
 </html>

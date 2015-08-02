@@ -3,7 +3,8 @@
  */
 var loginCtrl=angular.module("demo.login");
 
-loginCtrl.controller("loginController",['$scope','Authentication','$location',function($scope,authentication,$location){
+loginCtrl.controller("loginController",['$scope','_','Authentication','$state',
+    function($scope,_,authentication,$state){
     $scope.userName='';
     $scope.password='';
     $scope.loading = false;
@@ -12,7 +13,12 @@ loginCtrl.controller("loginController",['$scope','Authentication','$location',fu
        // var test=authentication.login($scope.userName,$scope.password);
         authentication.login().then(function(result){
 //            alert(result);
-            $location.path('/dashboard');
+            var flag= _.find(result , function(data){
+               return data.username===$scope.userName && data.password===$scope.password;
+            });
+            if(flag != undefined && flag != null)
+            //$location.path('/dashboard');
+            $state.go('dashboard');
         });
     }
 }]);
