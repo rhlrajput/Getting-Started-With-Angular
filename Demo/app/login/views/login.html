@@ -1,5 +1,5 @@
 <div ui-view="header"></div>
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4"  ng-controller="loginController">
 
@@ -19,6 +19,17 @@
             </div>
             <a href="#" class="text-center new-account">Create an account </a>
         </div>
+    </div>
+</div>-->
+<div class="loginmodal-container">
+    <h1></h1><br>
+    <form name="loginform" >
+        <input type="email" ng-model="userName"  placeholder="Email Id" ng-required="true" autofocus>
+        <input type="password" ng-model="password" placeholder="Password" ng-required="true">
+        <input type="submit" name="login" class="login loginmodal-submit" value="Login"  ng-click="loginform.$valid && authenticate()">
+    </form>
+    <div class="login-help">
+        <a href="#">Register</a> - <a href="#">Forgot Password</a>
     </div>
 </div>
 <div ui-view="footer"></div>

@@ -61,8 +61,14 @@
         RestangularProvider.setBaseUrl(ENV);
         // Auth details
         RestangularProvider.setDefaultHeaders({
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/jsonp'
         });
+        RestangularProvider.setDefaultHeaders({
+            'Access-Control-Allow-Headers': 'Accept, X-Requested-With',
+            'Access-Control-Allow-Origin': 'http://www.thomas-bayer.com',
+            'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE'
+        });
+
         RestangularProvider.setRequestSuffix('.json');
     }
 
