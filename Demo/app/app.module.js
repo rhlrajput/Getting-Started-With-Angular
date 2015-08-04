@@ -7,15 +7,15 @@
      'ngRoute'
      , 'demo.login','dashboard', 'ui.router','restangular'
      ])*/
-    var app = angular.module('Demo', [
+    var app = angular.module('Demo', ['firebase',
         'ui.router', 'demo.login', 'dashboard', 'restangular'
     ]);
     app.constant('_', window._);
-    app.constant('ENV', 'http://localhost:63342/Demo/api/');
+    app.constant('URL', 'http://localhost:63342/Demo/api/');
 
     app.config(demoConfig);
 
-    function demoConfig($urlRouterProvider, $stateProvider, RestangularProvider, ENV) {
+    function demoConfig($urlRouterProvider, $stateProvider, RestangularProvider, URL) {
         /* $routeProvider.
          when('/', {
          /!*url: '/login',*!/
@@ -28,9 +28,8 @@
          redirectTo:'/'
          });*/
         $urlRouterProvider.otherwise('/');
-        $stateProvider // urlRouteProvider advantages
-            .state('login', {
-                url: "/login",
+        $stateProvider.state('login', {
+                url: "/",
                 views: {
                     '': {
                         templateUrl: 'login/views/login.html',
@@ -58,7 +57,7 @@
                 }
             }
         );
-        RestangularProvider.setBaseUrl(ENV);
+        RestangularProvider.setBaseUrl(URL);
         // Auth details
         RestangularProvider.setDefaultHeaders({
             'Content-Type': 'application/jsonp'
