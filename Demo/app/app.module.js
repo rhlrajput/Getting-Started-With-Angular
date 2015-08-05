@@ -29,21 +29,21 @@
          });*/
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('login', {
-                url: "/",
-                views: {
-                    '': {
-                        templateUrl: 'login/views/login.html',
-                        controller: 'loginController'
-                    },
-                    'header@login': {
-                        templateUrl: '../app/views/header.html'
-                    },
-                    'footer@login': {
-                        templateUrl: '../app/views/footer.html'
-                    }
+            url: "/",
+            views: {
+                '': {
+                    templateUrl: 'login/views/login.html',
+                    controller: 'loginController'
+                },
+                'header@login': {
+                    templateUrl: '../app/views/header.html'
+                },
+                'footer@login': {
+                    templateUrl: '../app/views/footer.html'
                 }
+            }
 
-            }).
+        }).
             state('dashboard', {
                 url: '/dashboard',
                 views: {
@@ -65,7 +65,7 @@
         RestangularProvider.setDefaultHeaders({
             'Access-Control-Allow-Headers': 'Accept, X-Requested-With',
             'Access-Control-Allow-Origin': 'http://www.thomas-bayer.com',
-            'Access-Control-Allow-Methods':'GET, POST, PUT, DELETE'
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
         });
 
         RestangularProvider.setRequestSuffix('.json');

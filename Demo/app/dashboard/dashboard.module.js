@@ -9,13 +9,13 @@ dashboardApp.config(function ($stateProvider) {
             url: "/contact",
             views: {
                 '': {
-                    templateUrl: 'dashboard/views/contacts.html',
+                    templateUrl: '../app/dashboard/views/contacts.html',
                     controller: 'contactsController'
                 },
-                'menu@dashboard': {
+                'menu@contact': {
                     templateUrl: '../app/dashboard/views/menu.html'
                 },
-                'footer@login': {
+                'footer@contact': {
                     templateUrl: '../app/views/footer.html'
                 }
             }

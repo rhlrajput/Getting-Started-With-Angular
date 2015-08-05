@@ -7,3 +7,6 @@
 .submenu{
     width: 100%;
 }
+.nav-tabs > li > a {
+    margin-right:0px;
+}

@@ -4,5 +4,5 @@
 
 
 angular.module('dashboard').controller('dashboardController',['$scope', function($scope){
-
+$scope.name='Testing';
 }]);
