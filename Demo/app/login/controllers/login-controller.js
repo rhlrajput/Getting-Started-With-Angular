@@ -3,15 +3,18 @@
  */
 var loginCtrl=angular.module("demo.login");
 
-loginCtrl.controller("loginController",['$scope','_','Authentication','$state',
-    function($scope,_,authentication,$state){
+loginCtrl.controller("loginController",['$rootScope','$scope','_','Authentication','$state',
+    function($rootScope,$scope,_,authentication,$state){
     $scope.userName='';
     $scope.password='';
-    $scope.loading = false;
-    $scope.authenticate = function(){
+
+
+        $scope.authenticate = function(){
+            $rootScope.loading = true;
    // alert($scope.userName);
        // var test=authentication.login($scope.userName,$scope.password);
         authentication.login().then(function(result){
+            $rootScope.loading = false;
 //            alert(result);
             var flag= _.find(result , function(data){
                return data.username===$scope.userName && data.password===$scope.password;
@@ -19,6 +22,8 @@ loginCtrl.controller("loginController",['$scope','_','Authentication','$state',
             if(flag != undefined && flag != null)
             //$location.path('/dashboard');
             $state.go('dashboard');
+            else
+                window.alert('Invalid Credential!!');
         });
     }
 }]);

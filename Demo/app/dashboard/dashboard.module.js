@@ -2,7 +2,7 @@
  * Created by Rahul on 7/28/15.
  */
 
-var dashboardApp = angular.module('dashboard', ['firebase', 'ui.router']);
+var dashboardApp = angular.module('dashboard', ['firebase', 'ui.router','Demo']);
 dashboardApp.config(function ($stateProvider) {
     $stateProvider // urlRouteProvider advantages
         .state('contact', {

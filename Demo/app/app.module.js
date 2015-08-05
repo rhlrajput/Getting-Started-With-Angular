@@ -7,7 +7,7 @@
      'ngRoute'
      , 'demo.login','dashboard', 'ui.router','restangular'
      ])*/
-    var app = angular.module('Demo', ['firebase',
+    var app = angular.module('Demo', [
         'ui.router', 'demo.login', 'dashboard', 'restangular'
     ]);
     app.constant('_', window._);
