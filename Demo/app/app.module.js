@@ -11,6 +11,8 @@
         'ui.router', 'demo.login', 'dashboard', 'restangular'
     ]);
     app.constant('_', window._);
+    app.constant('d3', window.d3);
+
     app.constant('URL', 'http://localhost:63342/Demo/api/');
 
     app.config(demoConfig);
