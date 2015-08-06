@@ -1,0 +1,58 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'firebase' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 warn package.json application-name@0.0.1 No description
+6 warn package.json application-name@0.0.1 No repository field.
+7 warn package.json application-name@0.0.1 No README data
+8 silly cache add args [ 'firebase', null ]
+9 verbose cache add spec firebase
+10 silly cache add parsed spec { raw: 'firebase',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'firebase',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 verbose addNamed firebase@*
+12 silly addNamed semver.valid null
+13 silly addNamed semver.validRange *
+14 silly addNameRange { name: 'firebase', range: '*', hasData: false }
+15 silly mapToRegistry name firebase
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/firebase
+19 verbose addNameRange registry:https://registry.npmjs.org/firebase not in flight; fetching
+20 verbose request uri https://registry.npmjs.org/firebase
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 3:36:19 PM
+23 verbose request id cb8aac571cb94c13
+24 http request GET https://registry.npmjs.org/firebase
+25 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+26 info attempt registry request try #2 at 3:36:50 PM
+27 http request GET https://registry.npmjs.org/firebase
+28 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+29 info attempt registry request try #3 at 3:38:11 PM
+30 http request GET https://registry.npmjs.org/firebase
+31 verbose stack Error: connect ETIMEDOUT
+31 verbose stack     at exports._errnoException (util.js:746:11)
+31 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1000:19)
+32 verbose cwd D:\Git\Getting-Started-With-Angular\Demo
+33 error Windows_NT 6.1.7601
+34 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "firebase"
+35 error node v0.12.2
+36 error npm  v2.7.4
+37 error code ETIMEDOUT
+38 error errno ETIMEDOUT
+39 error syscall connect
+40 error network connect ETIMEDOUT
+40 error network This is most likely not a problem with npm itself
+40 error network and is related to network connectivity.
+40 error network In most cases you are behind a proxy or have bad network settings.
+40 error network
+40 error network If you are behind a proxy, please make sure that the
+40 error network 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]

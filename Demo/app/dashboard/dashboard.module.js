@@ -2,8 +2,8 @@
  * Created by Rahul on 7/28/15.
  */
 
-var dashboardApp = angular.module('dashboard', ['firebase', 'ui.router','Demo']);
-dashboardApp.config(function ($stateProvider) {
+var dashboardApp = angular.module('dashboard', ['restangular','firebase', 'ui.router','Demo']);
+dashboardApp.config(function ($stateProvider,RestangularProvider) {
     $stateProvider // urlRouteProvider advantages
         .state('contact', {
             url: "/contact",
@@ -20,8 +20,10 @@ dashboardApp.config(function ($stateProvider) {
                 }
             }
         });
+    RestangularProvider.setJsonp(true);
+    RestangularProvider.setDefaultRequestParams('jsonp', {callback: 'JSON_CALLBACK'});
 });
-/*dashboardApp.directive('d3Bars', ['d3', function(d3) {
+/*dash{boardApp.directive('d3Bars', ['d3', function(d3) {
     return {
         restrict: 'EA',
         scope: {},
